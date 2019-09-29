@@ -1,45 +1,32 @@
-## CvsEyes
+## Base Library
 
-### 预览
+### RUN
 
-![](./stare.gif)
+```bash
+npm install
+npm start
+```
 
-[在线演示](http://seejs.me/eyes/demo/index.html)
+### COMMANDS
 
-### 使用
+* `npm run dev`: 启动开发模式，并watch文件变更，自动重新打包代码
+* `npm run build`: 打包插件演示示例
+* `npm run demo`: 启动本地服务，并watch文件变更，实时更新demo效果
+* `npm run lib`: 打包出用于生产环境的插件代码
+* `npm run lint`: 对src目录进行eslint校验
 
-* ES6 Module
-    ```bash
-    npm install --save cvs-eyes
-    ```
-    在项目代码中：
-    ```js
-    import CvsEyes from 'cvs-eyes';
-    ...
-    <CvsEyes color="#f50" lineWidth={4} radius={8} />
-    ...
-    ```
+### 目录说明
 
-* Script
-    ```xml
-    <div id="root"></div>
-    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-    <script src="<pluginsHost>/dist/index.min.js"></script>
-    <script>
-    (function() {
-        const Eyes = React.createElement(CvsEyes.default, {
-            color: '#39f',
-            lineWidth: 2,
-            radius: 100
-        });
-        ReactDOM.render(Eyes, document.querySelector('#root');
-    }();
-    </script>
-    ```
-
-### 参数说明
-
-* `color<String>`: 合法的颜色值，包括`rgba`、`rgb`或`hex`;
-* `lineWidth<Number>`: 眼圈线宽度，建议整偶数。
-* `radius<Number>`: 指定眼球半径，默认值根据眼眶大小按比例自动缩放，最大值不超过`眼眶半径 - 2 * 眼眶线宽`。
+```bash
+|-- base-library       插件更目录（通常package.json中的name相同）
+  |-- config           放置插件开发配置
+    |-- base.js        通用配置
+    |-- demo.js        用于编译运行插件演示示例
+    |-- dev.js         用户编译输出开发环境使用的插件文件
+    |-- lib.js         用户编译输出生产环境的插件代码
+  |-- demo             编辑输出的插件演示代码目录
+  |-- example          插件演示示例源码目录
+  |-- src              插件自身源码目录
+    |-- index.js       插件入口（与webpackConfig中的entry对应）
+    |-- index.less     插件样式
+```

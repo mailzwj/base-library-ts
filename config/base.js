@@ -1,6 +1,4 @@
 const path = require('path');
-// const htmlPlugin = require('html-webpack-plugin');
-// const ExtractTextPlugin = require('mini-css-extract-plugin'); // 将css输出为独立文件
 
 const outputPath = path.resolve(__dirname, '../dist');
 
