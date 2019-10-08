@@ -14,6 +14,10 @@ npm start
 * `npm run demo`: 启动本地服务，并watch文件变更，实时更新demo效果
 * `npm run lib`: 打包出用于生产环境的插件代码
 * `npm run lint`: 对src目录进行eslint校验
+* `npm run doc:dev`: 开发组件文档
+* `npm run doc:build`: 编译生成组件文档
+
+_**补充**：编译文档需先安装[docz](https://www.docz.site/docs/project-configuration)，运行 `npm install docz -g`。_
 
 ### 目录说明
 
@@ -29,4 +33,5 @@ npm start
   |-- src              插件自身源码目录
     |-- index.js       插件入口（与webpackConfig中的entry对应）
     |-- index.less     插件样式
+  |-- index.mdx        组件文档
 ```

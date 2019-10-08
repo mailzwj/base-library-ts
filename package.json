@@ -10,6 +10,8 @@
     "build": "webpack --config ./config/demo.js",
     "start": "npm run dev",
     "lint": "./node_modules/.bin/eslint ./src",
+    "doc:dev": "docz dev",
+    "doc:build": "docz build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "mailzwj@126.com",
@@ -26,8 +28,11 @@
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.4",
     "css-loader": "^1.0.1",
+    "docz": "^1.3.2",
+    "docz-theme-default": "^1.2.0",
     "eslint": "^6.5.0",
     "eslint-plugin-react": "^7.14.3",
+    "happypack": "^5.0.1",
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
@@ -38,7 +43,7 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
-    "react": "^16.10.1",
-    "react-dom": "^16.10.1"
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
   }
 }

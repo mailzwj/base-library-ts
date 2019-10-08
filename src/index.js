@@ -11,8 +11,6 @@ class Library extends Component {
         //
     }
 
-    test() {}
-
     render() {
         return (
             <div className="library">
