@@ -2,6 +2,15 @@
 name: Base Component
 ---
 
+import { Playground } from 'docz';
+import BCom from './';
+
 # Base Component
 
-Hello, I'm a mdx file!
+<BCom text="I'm a base component!" />
+
+# Demo
+
+<Playground>
+  <BCom test="Test text" obj={{ attr: true }} />
+</Playground>
