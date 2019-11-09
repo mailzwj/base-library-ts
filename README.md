@@ -1,4 +1,4 @@
-## Base Library
+## Base Library Use Typescript
 
 ### RUN
 
@@ -31,7 +31,7 @@ _**补充**：编译文档需先安装[docz](https://www.docz.site/docs/project-
   |-- demo             编辑输出的插件演示代码目录
   |-- example          插件演示示例源码目录
   |-- src              插件自身源码目录
-    |-- index.js       插件入口（与webpackConfig中的entry对应）
+    |-- index.tsx      插件入口（与webpackConfig中的entry对应）
     |-- index.less     插件样式
   |-- index.mdx        组件文档
 ```

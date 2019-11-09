@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-import Library from '../src';
+import Library from '../src/index.tsx';
 
 import './index.less';
 

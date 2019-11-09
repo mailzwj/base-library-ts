@@ -1,9 +1,14 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 
 import './index.less';
 
-class Library extends Component {
-    constructor(props) {
+interface LibProps {
+    env: string,
+    data?: string
+}
+
+class Library extends React.Component<LibProps> {
+    constructor(props: LibProps) {
         super(props);
     }
 
